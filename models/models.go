@@ -57,7 +57,7 @@ func AddCategory(name string) error {
 	qs := o.QueryTable("category")
 	err := qs.Filter("title", name).One(cate)
 	if err == nil {
-		return err
+		return nil
 	}
 	_, err = o.Insert(cate)
 	if err != nil {

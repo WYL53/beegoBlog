@@ -1,0 +1,41 @@
+  {{template "header"}}
+     	<title>文章 - 我的博客</title>
+ 	</head>
+ 	
+ 	<body>
+ 		<div class="bs-example bs-navbar-top-example" data-example-id="navbar-fixed-to-top">
+ 		        <div class="container">
+ 		           {{template "navbar" .}}
+ 		        </div>
+ 		</div>
+
+ 		<div class="container" >
+ 			<label>文章列表</label>
+ 				<table class="table table-striped">
+ 					<thead>
+ 						<tr>
+ 							<th>#</th>
+ 							<th>文章名称</th>
+ 							<th>最后更新</th>
+ 							<th>浏览</th>
+							<th>回复数</th>
+ 						</tr>
+ 					</thead>
+ 					<tbody>
+ 						{{range .Categories}}
+ 						<tr>
+ 							<td>{{.Id}}</td>
+ 							<td>{{.Title}}</td>
+ 							<td>{{.Update}}</td>
+ 							<td>{{.Views}}</td>
+							<td>{{.ReplyCount}}</td>
+ 						</tr>
+ 						{{end}}
+ 					</tbody>
+ 				</table>
+ 			</div>
+
+ 			<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+ 	</body>
+ 	
+ </html>

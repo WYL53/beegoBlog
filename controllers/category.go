@@ -48,7 +48,3 @@ func (this *CategoryController) Get() {
 		beego.Error(err)
 	}
 }
-
-func (this *CategoryController) Post() {
-
-}
