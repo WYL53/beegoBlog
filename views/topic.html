@@ -11,6 +11,7 @@
 
  		<div class="container" >
  			<label>文章列表</label>
+			<a href="/topic/add" class="btn btn-dafault">添加文章</a>
  				<table class="table table-striped">
  					<thead>
  						<tr>
@@ -19,16 +20,18 @@
  							<th>最后更新</th>
  							<th>浏览</th>
 							<th>回复数</th>
+                                                                                            <th>op</th>
  						</tr>
  					</thead>
  					<tbody>
- 						{{range .Categories}}
+ 						{{range .Topics}}
  						<tr>
- 							<td>{{.Id}}</td>
+ 							<td><a href="/topic/view/{{.Id}}">{{.Id}}</a></td>
  							<td>{{.Title}}</td>
- 							<td>{{.Update}}</td>
+ 							<td>{{.Updated}}</td>
  							<td>{{.Views}}</td>
 							<td>{{.ReplyCount}}</td>
+                                                                                        <td><a href="/topic/delete/{{.Id}}">delete</a></td>
  						</tr>
  						{{end}}
  					</tbody>
