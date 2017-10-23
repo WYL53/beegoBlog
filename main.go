@@ -1,20 +1,20 @@
 package main
 
 import (
-	"beegoBlog/models"
-	_ "beegoBlog/routers"
+	_ "github.com/WYL53/beegoBlog/models"
+	_ "github.com/WYL53/beegoBlog/routers"
 
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
+	//"github.com/astaxie/beego/orm"
 )
 
 func init() {
-	models.RegisterDB()
+	//models.RegisterDB()
 }
 
 func main() {
-	orm.Debug = true
-	orm.RunSyncdb("default", false, true)
+	//orm.Debug = true
+	//orm.RunSyncdb("default", false, true)
 
 	beego.Run()
 }
